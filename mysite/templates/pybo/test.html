@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test 응시 시작</title>
+</head>
+<label>문제 : </label><label>{{ question.question }}</label>
+<form action="/result" method="post">
+    {% csrf_token %}
+    <input type="radio" name="answer" value="1"/>{{question.answer_one}}
+    <input type="radio" name="answer" value="2"/> {{question.answer_two}}
+    <input type="radio" name="answer" value="3"/> {{question.answer_three}}
+    <input type="radio" name="answer" value="4"/>{{question.answer_four}}
+    <p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
+</form>

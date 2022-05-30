@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for question in question_list %}
+            <li><a href="/pybo/{{question.id}}/">{{question.question}}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
